@@ -24,6 +24,10 @@ p1Btn.addEventListener("click", function () {
       gameOver = true;
       p1ScoreDisplay.style.color = "green";
       p2ScoreDisplay.style.color = "red";
+      p1Btn.classList.add("gameOverBtn");
+      p2Btn.classList.add("gameOverBtn");
+      p1Btn.disabled = true;
+      p2Btn.disabled = true;
     } 
     p1ScoreDisplay.textContent = p1Score;
   }
@@ -37,6 +41,10 @@ p2Btn.addEventListener("click", function () {
       gameOver = true;
       p2ScoreDisplay.style.color = "green";
       p1ScoreDisplay.style.color = "red";
+      p1Btn.classList.add("gameOverBtn");
+      p2Btn.classList.add("gameOverBtn");
+      p1Btn.disabled = true;
+      p2Btn.disabled = true;
     } 
     p2ScoreDisplay.textContent = p2Score;
   }
@@ -50,6 +58,10 @@ const resetGame = () => {
   p2ScoreDisplay.textContent = p2Score;
   p2ScoreDisplay.style.color = "black";
   p1ScoreDisplay.style.color = "black";
+  p1Btn.classList.remove("gameOverBtn");
+  p2Btn.classList.remove("gameOverBtn");
+  p1Btn.disabled = false;
+  p2Btn.disabled = false;
 }
 
 resetBtn.addEventListener("click", resetGame);

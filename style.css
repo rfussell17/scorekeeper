@@ -2,28 +2,28 @@ body {
   padding: 0;
   margin: 5em auto;
   text-align: center;
-  background-color: peachpuff;
+  background-color: #e9c46a;
 }
 
 .container {
   margin: 0 auto;
-  border: 5px solid #cc6239;
+  border: 5px solid #e76f51;
   border-radius: 10px;
-  width: 30%;
+  width: 33%;
   padding: 0;
 }
 
-.top, .bottom {
+.top, .bottom, .middle {
   width: 100%;
   margin: 0 auto;
 }
 
-.bottom {
-  border-top: 5px solid #cc6239;
-}
+/* .top {
+  border-bottom: 5px solid #e76f51;
+} */
 
-.top {
-  border-bottom: 5px solid #cc6239;
+.bottom {
+  border-top: 5px solid #e76f51;
 }
 
 img {
@@ -43,33 +43,29 @@ img {
 }
 
 .p1Btn-active {
-  background-color: green;
+  background-color: #2a9d8f;
 }
 
 .p2Btn-active {
-  background-color: royalblue;
+  background-color: #264653;
 }
 
 .resetBtn-active {
-  background-color: rgb(165, 65, 65);
+  background-color: #e76f51;
 }
 
 #p1Btn:hover, #p1Btn:focus {
-  background-color: rgb(9, 117, 9);
+  background-color: #006d77;
 }
 
 #p2Btn:hover, #p2Btn:focus {
-  background-color: rgb(42, 86, 218);
+  background-color: #1d3557;
 }
 
 #resetBtn:hover, #resetBtn:focus {
-  background-color: rgb(190, 25, 25);
+  background-color:#e63946;
 }
 
-.p1Btn-gameOver {
-  background-color: rgb(129, 158, 129);
-}
-
-.p2Btn-gameOver {
-  background-color: rgb(183, 195, 233);
+.gameOverBtn {
+  opacity: 0.2 ;
 }
