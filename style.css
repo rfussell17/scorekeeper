@@ -1,0 +1,75 @@
+body {
+  padding: 0;
+  margin: 5em auto;
+  text-align: center;
+  background-color: peachpuff;
+}
+
+.container {
+  margin: 0 auto;
+  border: 5px solid #cc6239;
+  border-radius: 10px;
+  width: 30%;
+  padding: 0;
+}
+
+.top, .bottom {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bottom {
+  border-top: 5px solid #cc6239;
+}
+
+.top {
+  border-bottom: 5px solid #cc6239;
+}
+
+img {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nums {
+  font-weight: bold;
+}
+
+#p1Btn, #p2Btn, #resetBtn {
+  padding: 7px 12px;
+  margin: 2em auto;
+  color: #fff;
+}
+
+.p1Btn-active {
+  background-color: green;
+}
+
+.p2Btn-active {
+  background-color: royalblue;
+}
+
+.resetBtn-active {
+  background-color: rgb(165, 65, 65);
+}
+
+#p1Btn:hover, #p1Btn:focus {
+  background-color: rgb(9, 117, 9);
+}
+
+#p2Btn:hover, #p2Btn:focus {
+  background-color: rgb(42, 86, 218);
+}
+
+#resetBtn:hover, #resetBtn:focus {
+  background-color: rgb(190, 25, 25);
+}
+
+.p1Btn-gameOver {
+  background-color: rgb(129, 158, 129);
+}
+
+.p2Btn-gameOver {
+  background-color: rgb(183, 195, 233);
+}
