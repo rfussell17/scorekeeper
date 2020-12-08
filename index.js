@@ -1,76 +1,62 @@
-let p1Score = 0;
-let p2Score = 0;
+const p1 = {
+  score: 0,
+  button: document.querySelector('#p1Btn'),
+  display: document.querySelector('#p1ScoreDisplay')
+};
+
+const p2 = {
+  score: 0,
+  button: document.querySelector('#p2Btn'),
+  display: document.querySelector('#p2ScoreDisplay')
+};
+
+const resetBtn = document.querySelector('#resetBtn');
 const numLimit = document.querySelector('#numLimit');
-
-const plScoreDisplay = document.getElementById("plScoreDisplay");
-const p2ScoreDisplay = document.getElementById("p2ScoreDisplay");
-
-p1ScoreDisplay.textContent = 0;
-p2ScoreDisplay.textContent = 0;
-
 let winningScore = 1;
-
 let gameOver = false;
 
-const p1Btn = document.getElementById("p1Btn");
-const p2Btn = document.getElementById("p2Btn");
-const resetBtn = document.getElementById("resetBtn");
-
-p1Btn.addEventListener("click", function () {
-  console.log("click1")
+function updateScores(player, opponent) {
   if (!gameOver) {
-    p1Score += 1;
-    if (p1Score === winningScore) {
+    player.score += 1;
+    if (player.score === winningScore) {
       gameOver = true;
-      p1ScoreDisplay.style.color = "green";
-      p2ScoreDisplay.style.color = "red";
-      p1Btn.classList.add("gameOverBtn");
-      p2Btn.classList.add("gameOverBtn");
-      p1Btn.disabled = true;
-      p2Btn.disabled = true;
-    } 
-    p1ScoreDisplay.textContent = p1Score;
+      player.display.classList.add('winner');
+      opponent.display.classList.add('loser');
+      player.button.classList.add('gameOverBtn');
+      opponent.button.classList.add('gameOverBtn');
+      player.button.disabled = true;
+      opponent.button.disabled = true;
+    }
+    player.display.textContent = player.score;
   }
-});
-
-p2Btn.addEventListener("click", function () {
-  console.log("click2")
-  if (!gameOver) {
-    p2Score += 1;
-    if (p2Score === winningScore) {
-      gameOver = true;
-      p2ScoreDisplay.style.color = "green";
-      p1ScoreDisplay.style.color = "red";
-      p1Btn.classList.add("gameOverBtn");
-      p2Btn.classList.add("gameOverBtn");
-      p1Btn.disabled = true;
-      p2Btn.disabled = true;
-    } 
-    p2ScoreDisplay.textContent = p2Score;
-  }
-});
-
-const resetGame = () => {
-  gameOver = false;
-  p1Score = 0;
-  p2Score = 0;
-  p1ScoreDisplay.textContent = p1Score;
-  p2ScoreDisplay.textContent = p2Score;
-  p2ScoreDisplay.style.color = "black";
-  p1ScoreDisplay.style.color = "black";
-  p1Btn.classList.remove("gameOverBtn");
-  p2Btn.classList.remove("gameOverBtn");
-  p1Btn.disabled = false;
-  p2Btn.disabled = false;
 }
 
-resetBtn.addEventListener("click", resetGame);
+p1.button.addEventListener('click', function () {
+  updateScores(p1, p2);
+});
+
+p2.button.addEventListener('click', function () {
+  updateScores(p2, p1);
+});
 
 numLimit.addEventListener('change', function () {
-  winningScore = parseInt(this.value)
-  resetGame()
-})
+  winningScore = parseInt(this.value);
+  resetGame();
+});
 
+
+resetBtn.addEventListener('click', resetGame);
+
+function resetGame(){
+  gameOver = false;
+  for (let p of [p1, p2]) {
+    p.score = 0;
+    p.display.textContent = 0;
+    p.display.classList.remove('loser', 'winner');
+    p.button.disabled = false;
+    p.button.classList.remove('gameOverBtn')
+  }
+};
 
 
 

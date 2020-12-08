@@ -1,6 +1,6 @@
 body {
   padding: 0;
-  margin: 5em auto;
+  margin: 2.5em auto;
   text-align: center;
   background-color: #f2cc8f;
   font-weight: bold;
@@ -77,4 +77,16 @@ img {
 
 .gameOverBtn {
   opacity: 0.2 ;
+}
+
+.winner {
+  color: green; 
+}
+
+.loser {
+  color: red;
+}
+
+.regular {
+  color: black;
 }
