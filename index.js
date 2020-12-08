@@ -1,14 +1,16 @@
-const p1 = {
-  score: 0,
-  button: document.querySelector("#p1Btn"),
-  display: document.querySelector("#p1ScoreDisplay"),
-};
+import { Player } from "./Player.js";
 
-const p2 = {
-  score: 0,
-  button: document.querySelector("#p2Btn"),
-  display: document.querySelector("#p2ScoreDisplay"),
-};
+const p1 = new Player(
+  0,
+  document.querySelector("#p1Btn"),
+  document.querySelector("#p1ScoreDisplay")
+);
+
+const p2 = new Player(
+  0,
+  document.querySelector("#p2Btn"),
+  document.querySelector("#p2ScoreDisplay")
+);
 
 const resetBtn = document.querySelector("#resetBtn");
 const numLimit = document.querySelector("#numLimit");

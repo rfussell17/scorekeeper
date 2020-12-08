@@ -4,7 +4,7 @@ body {
   text-align: center;
   background-color: #f2cc8f;
   font-weight: bold;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1.5em;
   overflow: hidden;
   letter-spacing: 1px;
@@ -24,7 +24,9 @@ body {
   padding: 0;
 }
 
-.top, .bottom, .middle {
+.top,
+.bottom,
+.middle {
   width: 100%;
   margin: 0 auto;
 }
@@ -43,12 +45,14 @@ img {
   font-weight: bold;
 }
 
-#p1Btn, #p2Btn, #resetBtn {
+#p1Btn,
+#p2Btn,
+#resetBtn {
   padding: 7px 12px;
   margin: 2em auto;
   color: #fff;
-  font-family: 'Raleway', sans-serif;
-  font-size: .6em;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.6em;
 }
 
 .p1Btn-active {
@@ -63,24 +67,27 @@ img {
   background-color: #e76f51;
 }
 
-#p1Btn:hover, #p1Btn:focus {
+#p1Btn:hover,
+#p1Btn:focus {
   background-color: #006d77;
 }
 
-#p2Btn:hover, #p2Btn:focus {
+#p2Btn:hover,
+#p2Btn:focus {
   background-color: #1d3557;
 }
 
-#resetBtn:hover, #resetBtn:focus {
-  background-color:#e63946;
+#resetBtn:hover,
+#resetBtn:focus {
+  background-color: #e63946;
 }
 
 .gameOverBtn {
-  opacity: 0.2 ;
+  opacity: 0.2;
 }
 
 .winner {
-  color: green; 
+  color: green;
 }
 
 .loser {
