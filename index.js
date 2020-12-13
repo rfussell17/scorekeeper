@@ -17,7 +17,7 @@ const numLimit = document.querySelector("#numLimit");
 let winningScore = 1;
 let gameOver = false;
 
-function updateScores(player, opponent) {
+function updateScores(player, opponent) { 
   if (!gameOver) {
     player.score += 1;
     if (player.score === winningScore) {
